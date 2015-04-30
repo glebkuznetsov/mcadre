@@ -15,6 +15,6 @@ if method == 1
 
 else % otherwise, use FASTCC
     display('Checking all reactions (FASTCC)...')
-    is_active = fastcc(model, 1e-4);
+    is_active = fastcc(model, 1e-4, 0);
     inactiveRxns = setdiff(model.rxns, model.rxns(is_active));
 end
